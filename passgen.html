@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="passgen.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator </h1>
+        <div class="display-container">
+            <!--here data is custom id u can use id=" " regular method but this is also  a way like id-->
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+            <button class="copybtn" data-copy>
+            <span class="tip" data-copyMsg> </span>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.6nCyDpxot5XHvKgHDtz55QAAAA&pid=Api&P=0&h=180" alt="copy" width="23px" height="13px">
+        </button>
+        </div>
+
+        <div class="input-container">
+            <div class="length-container">
+                <p>Password length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+            <!--checkbox-->
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes Uppercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Includes Lowercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes Numbers letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes symbols</label>
+            </div>
+
+            <!--strength section-->
+            <div class="strength-container">
+                <p>Strength</p>
+                <div class="indicator" data-indicator>
+
+                </div>
+             </div>
+
+             <!--generate password-->
+             <button class="generateButton">Generate Password</button>
+
+        </div>
+    </div>
+    <script src="passgen.js"></script>
+</body>
+</html>
